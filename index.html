@@ -1,0 +1,86 @@
+<!DOCTYPE>
+  <html>
+    <head>
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="css/styles.css" rel="stylesheet" type="text/css">
+      <script src="js/jquery-3.1.1.js"></script>
+      <script src="js/scripts.js"></script>
+      <title>Marketplace Survey</title>
+    </head>
+
+    <body>
+      <div class="container">
+        <div id="initially-showing">
+          <h1>Fill in the blanks to buy your dessert today!</h1>
+          <div id="blanks">
+            <form>
+              <!--name-->
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" class="form-control" type="text">
+              </div>
+              <!--address-->
+              <div class="form-group">
+                <label for="address">Shipping Address</label>
+                <input id="address" class="form-control" type="text">
+              </div>
+              <!--radio button - product-->
+              <div class="radio">
+                <label>
+                  <input type="radio" name="dessert" value="Cookie" checked>
+                  Cookie
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="dessert" value="Cake">
+                  Cake
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="dessert" value="Chocolate">
+                  Chocolate
+                </label>
+              </div>
+              <!--color - product color-->
+              <div class="form-group">
+                <label for="color">What color frosting would you like?</label>
+                <input id="color" class="form-control" type="color">
+              </div>
+              <!--Select Box - shipping method-->
+              <select class="form-control" id="shippingType">
+                <option>Plane</option>
+                <option>Train</option>
+                <option>Automobile</option>
+                <option>Boat</option>
+              </select>
+              <!--date - when to ship by-->
+              <div class="form-group">
+                <label for="ship">Select your ship by date!</label>
+                <input id="ship" class="form-control" type="date">
+              </div>
+
+              <button type="submit" class="btn">Purchase your dessert now!</button>
+            </form>
+          </div>
+        </div>
+
+      <div class="panel panel-default" id="initially-hidden">
+        <div class="panel-heading">
+          <h3 class="panel-title">Receipt</h3>
+        </div>
+        <div class="panel-body">
+            <p>Thank you <span class="name"></span> for buying your <span class="dessert"></span>! Here is your receipt:</p>
+            <p>Name:<span class="name"></span></p>
+            <p>Shipping Address: <span class="address"></span></p>
+            <p>Shipping Method: <span class= "shipType"></span></p>
+            <p>Product Purchased: <span class="dessert"></span></p>
+            <p>Frosting Color: <span class="color"></span></p>
+            <p>Estimated shipping date: <span class="shippingDate"></span></p>
+            <p>Thank you for shopping our desserts!</p>
+        </div>
+      </div>
+    </div>
+    </body>
+  </html>
